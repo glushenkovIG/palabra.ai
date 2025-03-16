@@ -10,6 +10,8 @@
   <a href="#-community-structure">Community Structure</a> •
   <a href="#-code-example">Code Example</a> •
   <a href="#-challenges--solutions">Challenges</a> •
+  <a href="#-audio--video-technologies">Audio/Video Tech</a> •
+  <a href="#-api-business-models">API Business</a> •
   <a href="#-90-day-plan">90-Day Plan</a> •
   <a href="#-common-mistakes">Mistakes</a> •
   <a href="#-industry-leaders">Industry Leaders</a>
@@ -220,6 +222,108 @@ export default VoiceTranslator;
 | **Community Engagement** | • Regular events (virtual/in-person)<br>• Recognition programs<br>• Valuable exclusive content |
 | **Product-Market Fit** | • Continuous feedback loops<br>• Regular user testing<br>• Feature prioritization framework |
 | **Technical Support Scale** | • Tiered support model<br>• Comprehensive knowledge base<br>• Community-powered forums |
+
+## 🔊 Audio & Video Technologies
+
+<details open>
+<summary>Understanding Real-Time Voice/Video Transfer</summary>
+
+### Core Technologies & Protocols
+
+| Technology | Description | Use Case |
+|:-----------|:------------|:---------|
+| **WebRTC** | Open-source project enabling real-time communication via simple APIs | P2P voice/video calls, live broadcasting |
+| **WebSockets** | Protocol providing full-duplex communication channels | Real-time data exchange, signaling |
+| **RTP/RTCP** | Transport protocol for delivering audio/video over IP networks | Streaming media, VoIP applications |
+| **SIP** | Session Initiation Protocol for signaling in VoIP | Call setup, management, and teardown |
+| **RTMP** | Real-Time Messaging Protocol for high-performance transmission | Live streaming, video platforms |
+
+### Audio Processing Pipeline
+
+```
+┌─────────────┐   ┌─────────────┐   ┌──────────────┐   ┌──────────────┐   ┌────────────┐
+│ Capture     │   │ Processing  │   │ Encoding     │   │ Transmission │   │ Decoding   │
+│ (Microphone)│ → │ (Noise      │ → │ (Opus,       │ → │ (WebRTC,     │ → │ (Client    │
+│             │   │ Reduction)  │   │ AAC, MP3)    │   │ WebSockets)  │   │ Side)      │
+└─────────────┘   └─────────────┘   └──────────────┘   └──────────────┘   └────────────┘
+```
+
+### Key Considerations for Voice Translation APIs
+
+1. **Latency Management**
+   - Target < 300ms end-to-end for natural conversation
+   - Optimize network path and codec selection
+
+2. **Audio Quality**
+   - Adaptive bitrate based on network conditions
+   - Noise cancellation and echo reduction techniques
+
+3. **Error Handling**
+   - Packet loss concealment
+   - Jitter buffering strategies
+
+4. **Scalability Approaches**
+   - Media servers vs. P2P architectures
+   - Geographic distribution of processing nodes
+
+5. **Security Considerations**
+   - End-to-end encryption (DTLS-SRTP)
+   - Authentication and access control
+
+</details>
+
+## 💰 API Business Models
+
+<details open>
+<summary>Monetization & Pricing Strategies</summary>
+
+### Common API Business Models
+
+| Model | Description | Best For |
+|:------|:------------|:---------|
+| **Usage-Based** | Pay per API call or data processed | APIs with variable usage patterns |
+| **Tiered** | Multiple pricing tiers with different features/limits | Serving diverse customer segments |
+| **Freemium** | Free basic tier + paid premium features | Maximizing adoption and upselling |
+| **Subscription** | Fixed recurring fee for access | Predictable revenue, enterprise clients |
+| **Transaction Fee** | Percentage of transaction value | Payment or marketplace APIs |
+
+### Pricing Dimensions for Voice Translation APIs
+
+- **Volume**: Cost per minute of audio processed
+- **Language Pairs**: Different rates for different language combinations
+- **Quality Tiers**: Standard vs. high-accuracy translations
+- **Features**: Base translation vs. speaker identification, emotion detection, etc.
+- **SLA Requirements**: Higher pricing for guaranteed uptime/performance
+
+### Developer-Friendly Pricing Patterns
+
+1. **Predictable Pricing**
+   - Clear, transparent cost structure
+   - No hidden fees or surprising charges
+
+2. **Free Development Tier**
+   - Generous free quota for testing and development
+   - Seamless transition to paid plans
+
+3. **Pay-As-You-Grow**
+   - Minimal upfront costs
+   - Volume discounts at scale
+
+4. **Success-Aligned Pricing**
+   - Pricing that scales with customer value creation
+   - Partner-oriented approach vs. vendor relationship
+
+### Measuring API Business Health
+
+| Metric | Formula | Target |
+|:-------|:--------|:-------|
+| **API Retention Rate** | % of developers still active after X months | >85% annual |
+| **Average Revenue Per API User (ARPAU)** | Total API revenue / number of active users | Growing 15%+ QoQ |
+| **Time to First Hello World** | Time from signup to first successful API call | <30 minutes |
+| **Cost to Serve** | Infrastructure + support costs per API call | <40% of revenue |
+| **Net Dollar Retention** | (Starting revenue + expansions - contractions - churn) / starting revenue | >120% |
+
+</details>
 
 ## 📅 90-Day Plan
 
